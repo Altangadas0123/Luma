@@ -14,14 +14,14 @@ const main = async () => {
   const result = await response.json();
 
 
-    result.forEach((photo) => {
-      const id = photo.id;
-      const imageUrl = photo.urls.full;
-    
-      images.innerHTML += `
-      <img class="w-full h-auto mb-6 break-inside-avoid rounded-2xl" src="${imageUrl}" alt="${id}">
-      `;
-    });
+  result.forEach((photo) => {
+    const id = photo.id;
+    const imageUrl = photo.urls.small;
+  
+    images.innerHTML += `
+    <img class="w-full h-auto mb-6 break-inside-avoid rounded-2xl" src="${imageUrl}"alt="${id}">
+    `;
+  });
 };
 
 main();
